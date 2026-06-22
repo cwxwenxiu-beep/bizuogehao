@@ -1,0 +1,122 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+locale: "zh_Hans"
+publish_mode: simple
+
+collections:
+  - name: "settings"
+    label: "① 网站设置（联系方式 / 二维码）"
+    delete: false
+    files:
+      - name: "contact"
+        label: "联系方式 与 微信二维码"
+        file: "content/settings.json"
+        fields:
+          - { label: "公司名称", name: "company", widget: "string" }
+          - { label: "商务邮箱", name: "email", widget: "string" }
+          - { label: "电话（可选）", name: "phone", widget: "string", required: false }
+          - { label: "微信二维码（上传图片）", name: "wechat_qr", widget: "image" }
+          - { label: "二维码说明文字", name: "wechat_note", widget: "string", required: false }
+
+  - name: "drama"
+    label: "② 短剧作品（代表作 + 作品矩阵）"
+    delete: false
+    files:
+      - name: "works"
+        label: "短剧海报与片名"
+        file: "content/works.json"
+        fields:
+          - label: "代表作 Featured（首页第二页大图）"
+            name: "featured"
+            widget: "object"
+            fields:
+              - { label: "英文片名", name: "title_en", widget: "string" }
+              - { label: "中文片名", name: "title_cn", widget: "string" }
+              - { label: "类型标签（如：复仇 · 狼人 · 豪门）", name: "genre", widget: "string" }
+              - { label: "一句话 tagline（可选）", name: "tagline", widget: "string", required: false }
+              - { label: "海报图（上传 9:16 图片）", name: "poster", widget: "image" }
+          - label: "作品矩阵 Slate（多张海报墙，可增删/排序）"
+            name: "slate"
+            widget: "list"
+            label_singular: "一部短剧"
+            summary: "{{fields.title_en}} · {{fields.title_cn}}"
+            fields:
+              - { label: "英文片名", name: "title_en", widget: "string" }
+              - { label: "中文片名", name: "title_cn", widget: "string" }
+              - { label: "类型标签", name: "genre", widget: "string", required: false }
+              - { label: "海报图（上传 9:16 图片）", name: "poster", widget: "image" }
+              - { label: "标记“热播 · TikTok”角标", name: "live", widget: "boolean", default: false, required: false }
+
+  - name: "home"
+    label: "③ 首页文案"
+    delete: false
+    files:
+      - name: "home"
+        label: "首页全部文字"
+        file: "content/home.json"
+        fields:
+          - { label: "Hero 小标签", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero 标题 · 第一行", name: "hero_l1", widget: "string" }
+          - { label: "Hero 标题 · 第二行前缀", name: "hero_l2_prefix", widget: "string" }
+          - { label: "Hero 标题 · 高亮词", name: "hero_l2_accent", widget: "string" }
+          - { label: "Hero 副文案", name: "hero_lead", widget: "text" }
+          - { label: "业务标签", name: "hero_tags", widget: "list", field: { label: "标签", name: "tag", widget: "string" } }
+          - label: "运营台四步"
+            name: "oi_rows"
+            widget: "list"
+            fields:
+              - { label: "中文", name: "cn", widget: "string" }
+              - { label: "英文", name: "en", widget: "string" }
+              - { label: "状态", name: "state", widget: "string" }
+          - { label: "全链路大标题（用 “ / ” 表示换行）", name: "funnel_head", widget: "string" }
+          - { label: "看板标题", name: "fn_title", widget: "string" }
+          - { label: "看板副标", name: "fn_sub", widget: "string" }
+          - label: "全链路三层"
+            name: "fn_rows"
+            widget: "list"
+            fields:
+              - { label: "角标字（如 品/种/效）", name: "badge", widget: "string" }
+              - { label: "层级名", name: "name", widget: "string" }
+              - { label: "打法描述", name: "tactics", widget: "string" }
+              - { label: "目标词", name: "goal", widget: "string" }
+              - { label: "高亮为红色（成交那行）", name: "hot", widget: "boolean", default: false, required: false }
+          - { label: "看板底部说明", name: "fn_note", widget: "string" }
+          - { label: "能力区标题", name: "cap_head", widget: "string" }
+          - label: "能力三件事"
+            name: "caps"
+            widget: "list"
+            fields:
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "英文小标", name: "en", widget: "string" }
+              - { label: "描述", name: "desc", widget: "text" }
+          - { label: "拓展区标题", name: "expand_head", widget: "string" }
+          - { label: "CTA 小标签", name: "cta_eyebrow", widget: "string" }
+          - { label: "CTA 标题（用 “ / ” 表示换行）", name: "cta_head", widget: "string" }
+          - { label: "CTA 副文案", name: "cta_sub", widget: "text" }
+
+  - name: "businesspage"
+    label: "④ 内容营销页文案"
+    delete: false
+    files:
+      - name: "business"
+        label: "内容营销页全部文字"
+        file: "content/business.json"
+        fields:
+          - { label: "小标签", name: "eyebrow", widget: "string" }
+          - { label: "页面标题", name: "title", widget: "string" }
+          - { label: "副文案", name: "lead", widget: "text" }
+          - label: "平台 / 能力卡片"
+            name: "plats"
+            widget: "list"
+            fields:
+              - { label: "英文小标（如 RED · 小红书）", name: "tag_en", widget: "string" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "描述", name: "desc", widget: "string" }
+          - { label: "CTA 小标签", name: "cta_eyebrow", widget: "string" }
+          - { label: "CTA 标题（用 “ / ” 表示换行）", name: "cta_head", widget: "string" }
+          - { label: "CTA 副文案", name: "cta_sub", widget: "text" }

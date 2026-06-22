@@ -1,0 +1,33 @@
+{
+  "hero_eyebrow": "内容营销 · Content Marketing",
+  "hero_l1": "内容营销",
+  "hero_l2_prefix": "不只是",
+  "hero_l2_accent": "投流量",
+  "hero_lead": "从品牌内容、达人种草到投放转化，我们把品牌的内容做成一条可执行、可复盘的增长线——而不是一次性曝光。",
+  "hero_tags": ["品牌营销", "达人投放", "小红书种草", "短视频推广"],
+  "oi_rows": [
+    { "cn": "品牌目标", "en": "Brand brief", "state": "已对齐" },
+    { "cn": "内容种草", "en": "Seeding", "state": "已锁定" },
+    { "cn": "投放转化", "en": "Conversion", "state": "投放中" },
+    { "cn": "数据复盘", "en": "Review", "state": "持续优化" }
+  ],
+  "funnel_head": "从品牌到成交 / 一条线管理",
+  "fn_title": "全链路看板",
+  "fn_sub": "品牌 · 种草 · 转化",
+  "fn_rows": [
+    { "badge": "品", "name": "品牌建设", "tactics": "微博品宣 · 头部 KOL · B 站深度内容", "goal": "认知", "hot": false },
+    { "badge": "种", "name": "种草渗透", "tactics": "小红书 KOC 矩阵 · 达人测评 · 真实口碑", "goal": "心智", "hot": false },
+    { "badge": "效", "name": "效果转化", "tactics": "信息流 / 千川 · 直播带货 · 私域复购", "goal": "成交", "hot": true }
+  ],
+  "fn_note": "真实内容 > 精致硬广 —— 我们做能被相信的内容，而不是一次性曝光。",
+  "cap_head": "把内容做成增长",
+  "caps": [
+    { "title": "达人投放", "en": "Creator · KOL / KOC", "desc": "小红书种草、抖音与快手达人合作，按品类与转化目标精准选号，而不是只看粉丝量。" },
+    { "title": "短视频与代运营", "en": "Content & Operation", "desc": "内容策划、拍摄剪辑与账号矩阵代运营，把内容做成可持续积累的品牌资产。" },
+    { "title": "投放与转化", "en": "Performance", "desc": "信息流 / 千川 / 聚光投流、直播与私域转化，数据驱动，持续复盘优化 ROI。" }
+  ],
+  "expand_head": "我们也在做更多",
+  "cta_eyebrow": "启动合作 · Start a project",
+  "cta_head": "准备启动 / 一次内容营销项目？",
+  "cta_sub": "把品牌品类、目标平台和预算范围发给我们，商务团队会回应可执行、可复盘的方案。"
+}

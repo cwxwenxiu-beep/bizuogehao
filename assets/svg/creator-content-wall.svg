@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+<rect width="1600" height="900" fill="#F6F1EA"/>
+<circle cx="1248" cy="248" r="168" fill="#C0392B" opacity=".10"/>
+<rect x="988" y="140" width="420" height="560" rx="32" fill="#151515"/>
+<text x="116" y="188" font-family="Arial" font-size="22" font-weight="700" letter-spacing="4" fill="#C0392B">WHY US</text>
+<text x="116" y="292" font-family="Arial" font-size="70" font-weight="800" fill="#151515">我们不只撮合达人，</text>
+<text x="116" y="374" font-family="Arial" font-size="70" font-weight="800" fill="#151515">更管理内容与节奏。</text>
+<text x="116" y="460" font-family="Arial" font-size="26" fill="#666666">品牌目标、达人表达、平台语境和复盘动作，需要被放在同一条线上管理。</text>
+<text x="1042" y="248" font-family="Arial" font-size="18" font-weight="700" fill="#D8C3A5">BRAND</text>
+<text x="1042" y="322" font-family="Arial" font-size="18" font-weight="700" fill="#D8C3A5">CREATOR</text>
+<text x="1042" y="396" font-family="Arial" font-size="18" font-weight="700" fill="#D8C3A5">CONTENT</text>
+<text x="1042" y="470" font-family="Arial" font-size="18" font-weight="700" fill="#D8C3A5">PUBLISH</text>
+<text x="1042" y="544" font-family="Arial" font-size="18" font-weight="700" fill="#D8C3A5">REVIEW</text>
+<path d="M1184 236H1306" stroke="#C0392B" stroke-width="6"/>
+<path d="M1184 310H1306" stroke="#C0392B" stroke-width="6"/>
+<path d="M1184 384H1306" stroke="#C0392B" stroke-width="6"/>
+<path d="M1184 458H1306" stroke="#C0392B" stroke-width="6"/>
+<path d="M1184 532H1306" stroke="#C0392B" stroke-width="6"/>
+</svg>

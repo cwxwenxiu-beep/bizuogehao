@@ -1,0 +1,14 @@
+{
+  "eyebrow": "内容营销 · Content Marketing",
+  "title": "内容营销服务",
+  "lead": "品牌营销、达人投放、小红书种草与短视频推广——从品牌到种草到转化，把内容做成一条可执行、可复盘的增长线。",
+  "plats": [
+    { "tag_en": "RED · 小红书", "title": "小红书达人种草", "desc": "适合搜索沉淀与口碑建设" },
+    { "tag_en": "DOUYIN · 抖音", "title": "抖音达人合作", "desc": "适合短视频扩散与内容爆点表达" },
+    { "tag_en": "KUAISHOU · 快手", "title": "快手达人推广", "desc": "适合信任沟通与分销合作" },
+    { "tag_en": "DISTRIBUTION · 分销", "title": "达人分销", "desc": "适合具备转化需求的产品合作" }
+  ],
+  "cta_eyebrow": "Start a project · 启动合作",
+  "cta_head": "有合适的品类 / 就有合适的达人",
+  "cta_sub": "把品牌品类与目标平台发给我们，商务团队会做初步判断。"
+}

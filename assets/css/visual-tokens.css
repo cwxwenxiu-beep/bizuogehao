@@ -1,0 +1,6 @@
+/* 比昨个好文化传媒 — brand tokens */
+:root{
+  --paper:#FAF8F3; --card:#FFFFFF; --ink:#17140F; --ink-soft:#2B2620;
+  --text:#544E45; --muted:#9A8F80; --line:#ECE6DC; --line-2:#D8D0C3;
+  --red:#CE3B2B; --red-dark:#9C2A1E; --beige:#D8C3A5;
+}

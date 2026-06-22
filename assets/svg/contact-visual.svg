@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+<rect width="1600" height="900" fill="#151515"/>
+<circle cx="1260" cy="248" r="192" fill="#C0392B" opacity=".15"/>
+<text x="120" y="220" font-family="Arial" font-size="78" font-weight="800" fill="#FFFDF9">准备启动项目？</text>
+<text x="120" y="300" font-family="Arial" font-size="28" fill="#D8C3A5">把品牌品类、目标平台和预算范围发给我们。</text>
+<rect x="120" y="390" width="230" height="62" rx="31" fill="#C0392B"/>
+<text x="178" y="431" font-family="Arial" font-size="22" font-weight="700" fill="#FFFDF9">联系商务</text>
+<text x="120" y="540" font-family="Arial" font-size="34" font-weight="700" fill="#FFFDF9">business@bizuogehao.com</text>
+<rect x="1120" y="210" width="280" height="340" rx="34" fill="#FFFDF9"/>
+<text x="1172" y="284" font-family="Arial" font-size="28" font-weight="800" fill="#151515">商务微信</text>
+<rect x="1172" y="320" width="176" height="176" rx="18" fill="#F6F1EA" stroke="#E4DED6"/>
+<text x="1180" y="534" font-family="Arial" font-size="18" fill="#777777">扫码添加商务顾问</text>
+</svg>
