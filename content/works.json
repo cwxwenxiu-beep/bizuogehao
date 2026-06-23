@@ -7,11 +7,47 @@
     "poster": "assets/img/posters/last-wolf-queen.jpg"
   },
   "slate": [
-    { "title_en": "Heir to Nothing",      "title_cn": "弃子归来", "genre": "复仇逆袭", "poster": "assets/img/posters/heir.svg",    "live": false },
-    { "title_en": "Married to My Enemy",  "title_cn": "契约隐婚妻", "genre": "先婚甜宠", "poster": "assets/img/posters/married.svg", "live": true  },
-    { "title_en": "The Last Message",     "title_cn": "最后讯息", "genre": "都市悬疑", "poster": "assets/img/posters/message.svg", "live": false },
-    { "title_en": "The General's Return", "title_cn": "战神归来", "genre": "战神逆袭", "poster": "assets/img/posters/general.svg", "live": false },
-    { "title_en": "Crown of Lies",        "title_cn": "豪门谎言", "genre": "豪门恩怨", "poster": "assets/img/posters/crown.svg",   "live": false },
-    { "title_en": "After the Bell",       "title_cn": "放学之后", "genre": "校园纯爱", "poster": "assets/img/posters/bell.svg",    "live": false }
+    {
+      "title_en": "THE TRILLION-DOLLAR HERO",
+      "title_cn": "千亿战豪",
+      "genre": "都市豪门霸总",
+      "poster": "/assets/img/uploads/11.png",
+      "live": false
+    },
+    {
+      "title_en": "Married to My Enemy",
+      "title_cn": "契约隐婚妻",
+      "genre": "先婚甜宠",
+      "poster": "assets/img/posters/married.svg",
+      "live": true
+    },
+    {
+      "title_en": "The Last Message",
+      "title_cn": "最后讯息",
+      "genre": "都市悬疑",
+      "poster": "assets/img/posters/message.svg",
+      "live": false
+    },
+    {
+      "title_en": "The General's Return",
+      "title_cn": "战神归来",
+      "genre": "战神逆袭",
+      "poster": "assets/img/posters/general.svg",
+      "live": false
+    },
+    {
+      "title_en": "Crown of Lies",
+      "title_cn": "豪门谎言",
+      "genre": "豪门恩怨",
+      "poster": "assets/img/posters/crown.svg",
+      "live": false
+    },
+    {
+      "title_en": "After the Bell",
+      "title_cn": "放学之后",
+      "genre": "校园纯爱",
+      "poster": "assets/img/posters/bell.svg",
+      "live": false
+    }
   ]
 }
