@@ -1,7 +1,7 @@
 {
   "featured": {
     "title_en": "The Last Wolf Queen",
-    "title_cn": "弃位之狼后",
+    "title_cn": "弃位狼后",
     "genre": "复仇 · 狼人 · 豪门",
     "tagline": "Bound by blood. Ruled by fate. — She's the last of her kind. He's the king of them all.",
     "poster": "assets/img/posters/last-wolf-queen.jpg"
@@ -17,7 +17,7 @@
     {
       "title_en": "Ashes to Crown",
       "title_cn": "浴火归权",
-      "genre": "都市豪门复仇爽剧（女频大女主）",
+      "genre": "复仇爽剧",
       "poster": "/assets/img/uploads/2.png",
       "live": true
     },
