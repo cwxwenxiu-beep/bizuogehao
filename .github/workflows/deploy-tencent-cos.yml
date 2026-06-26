@@ -1,0 +1,46 @@
+# 部署到「腾讯云 COS + CDN」的草稿(国内这条腿)
+# 现在默认【手动触发】,不会自动跑、也不会因缺密钥而报错。
+# 等你在仓库 Settings → Secrets 配好下面 4 个密钥后,
+# 把 on: 里的 push 那段取消注释,即可改成「push 到 main 自动部署」。
+#
+# 需要的 Secrets(GitHub 仓库 Settings → Secrets and variables → Actions):
+#   TENCENT_SECRET_ID   腾讯云 SecretId(建议子账号、只给该 Bucket 权限)
+#   TENCENT_SECRET_KEY  腾讯云 SecretKey
+#   COS_BUCKET          存储桶名,带 APPID,例:bizuogehao-1250000000
+#   COS_REGION          地域,例:ap-beijing / ap-guangzhou
+
+name: Deploy to Tencent COS (草稿·手动触发)
+
+on:
+  workflow_dispatch: {}
+  # 密钥配好后取消下面注释改为自动部署:
+  # push:
+  #   branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 整理待上传文件(排除 .git/.github 等)
+        run: |
+          mkdir -p _dist
+          rsync -a --exclude='.git' --exclude='.github' --exclude='_dist' ./ _dist/
+          echo "将上传以下文件:" && ls _dist
+
+      - name: 上传到 COS(clean=true 保持与仓库一致)
+        uses: TencentCloud/cos-action@v1
+        with:
+          secret_id: ${{ secrets.TENCENT_SECRET_ID }}
+          secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
+          cos_bucket: ${{ secrets.COS_BUCKET }}
+          cos_region: ${{ secrets.COS_REGION }}
+          local_path: _dist
+          remote_path: /
+          clean: true
+
+      # 可选:如果用了腾讯云 CDN,部署后刷新 CDN 缓存(需额外步骤调用 SDK/CLI)
+      # - name: 刷新 CDN 缓存(可选)
+      #   run: echo "在此调用腾讯云 CDN PurgePathCache 刷新 https://bizuogehao.com/"
