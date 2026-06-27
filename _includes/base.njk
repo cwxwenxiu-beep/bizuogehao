@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ (seo_title if seo_title else title + "｜" + site.name) }}</title>
 <meta name="description" content="{{ (seo_description if seo_description else summary) }}">
+{% if keywords %}<meta name="keywords" content="{{ keywords | join(', ') }}">{% endif %}
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ title }}｜{{ site.name }}">
 <meta property="og:description" content="{{ summary }}">
