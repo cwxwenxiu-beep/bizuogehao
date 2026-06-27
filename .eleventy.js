@@ -9,7 +9,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.txt");     // robots.txt
   eleventyConfig.addPassthroughCopy("assets");    // css/js/img/svg
   eleventyConfig.addPassthroughCopy("admin");     // Decap CMS 后台
-  eleventyConfig.addPassthroughCopy("content");   // CMS 数据(JSON 等)
+  // CMS 数据 JSON:逐个原样拷贝(不整目录拷,以免和下面 content/news/*.md 的模板处理冲突)
+  eleventyConfig.addPassthroughCopy("content/settings.json");
+  eleventyConfig.addPassthroughCopy("content/home.json");
+  eleventyConfig.addPassthroughCopy("content/business.json");
+  eleventyConfig.addPassthroughCopy("content/works.json");
 
   return {
     dir: { input: ".", output: "_site", includes: "_includes" },
