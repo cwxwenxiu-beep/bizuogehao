@@ -1,0 +1,24 @@
+---
+layout: page.njk
+permalink: /news/index.html
+title: 行业观察｜比昨个好文化传媒
+description: 比昨个好文化传媒的行业观察——短剧出海、达人营销、品牌营销的实操方法与一线洞察。
+eleventyExcludeFromCollections: true
+---
+<main class="simple"><div class="container">
+  <span class="eyebrow reveal">Insights · 行业观察</span>
+  <h1 class="reveal">行业观察</h1>
+  <p class="reveal">短剧出海、达人营销、品牌营销的实操方法与一线观察。</p>
+  <div class="news-tabs reveal">
+    <a class="news-tab is-active" href="/news/">全部</a>
+    {%- for slug in categoryList %}
+    <a class="news-tab" href="/news/{{ slug }}/">{{ categories[slug] }}</a>
+    {%- endfor %}
+  </div>
+  <div class="news-list reveal">
+    {%- for post in collections.post | reverse %}
+    {% include "post-card.njk" %}
+    {%- endfor %}
+    {%- if collections.post.length == 0 %}<p class="news-empty">文章正在路上，敬请期待。</p>{%- endif %}
+  </div>
+</div></main>

@@ -1,0 +1,9 @@
+<a class="post-card" href="{{ post.url }}">
+  {% if post.data.cover %}<span class="post-card-cover"><img src="{{ post.data.cover }}" alt="{{ post.data.title }}" loading="lazy"></span>{% endif %}
+  <span class="post-card-body">
+    <span class="post-card-cat">{{ categories[post.data.category] }}</span>
+    <span class="post-card-title">{{ post.data.title }}</span>
+    <span class="post-card-summary">{{ post.data.summary }}</span>
+    <span class="post-card-date">{{ post.data.date | ymd }}</span>
+  </span>
+</a>

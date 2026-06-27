@@ -120,3 +120,29 @@ collections:
           - { label: "CTA 小标签", name: "cta_eyebrow", widget: "string" }
           - { label: "CTA 标题（用 “ / ” 表示换行）", name: "cta_head", widget: "string" }
           - { label: "CTA 副文案", name: "cta_sub", widget: "text" }
+
+  - name: "news"
+    label: "⑤ 行业观察（文章）"
+    label_singular: "文章"
+    folder: "content/news"
+    create: true
+    slug: "{{fields.slug}}"
+    extension: "md"
+    format: "frontmatter"
+    sortable_fields: ["date"]
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "URL地址（英文+短横线，如 duanju-chuhai-ru-men）", name: "slug", widget: "string" }
+      - label: "分类"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI短剧 · 出海短剧", value: "ai-drama" }
+          - { label: "达人营销", value: "daren" }
+          - { label: "品牌营销", value: "brand" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "摘要（列表展示 + 搜索引擎描述）", name: "summary", widget: "text" }
+      - { label: "封面图（可选）", name: "cover", widget: "image", required: false }
+      - { label: "作者", name: "author", widget: "string", default: "比昨个好编辑部", required: false }
+      - { label: "设为草稿（勾选则不发布）", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }

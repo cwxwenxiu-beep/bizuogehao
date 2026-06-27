@@ -1,0 +1,27 @@
+---
+layout: page.njk
+pagination:
+  data: categoryList
+  size: 1
+  alias: catslug
+permalink: "/news/{{ catslug }}/index.html"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ categories[catslug] }}｜行业观察｜比昨个好文化传媒"
+  description: "比昨个好文化传媒 · {{ categories[catslug] }}相关的行业观察、实操方法与案例。"
+---
+<main class="simple"><div class="container">
+  <span class="eyebrow reveal">Insights · 行业观察</span>
+  <h1 class="reveal">{{ categories[catslug] }}</h1>
+  <div class="news-tabs reveal">
+    <a class="news-tab" href="/news/">全部</a>
+    {%- for slug in categoryList %}
+    <a class="news-tab {% if slug == catslug %}is-active{% endif %}" href="/news/{{ slug }}/">{{ categories[slug] }}</a>
+    {%- endfor %}
+  </div>
+  <div class="news-list reveal">
+    {%- for post in collections.post | reverse %}
+    {%- if post.data.category == catslug %}{% include "post-card.njk" %}{%- endif %}
+    {%- endfor %}
+  </div>
+</div></main>

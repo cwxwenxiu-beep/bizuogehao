@@ -1,23 +1,31 @@
-// Eleventy 配置 —— 阶段1:只做"现有站原样直出"
-// 原则:现有手写页面一律 passthrough 原样拷贝,不经任何模板处理 → 输出字节级一致。
-// 后续 news 版块的文章/列表/分类模板(.njk/.md)再逐步加入。
+// Eleventy 配置
+// 原则:现有手写页面一律 passthrough 原样拷贝(字节级一致),只新增 /news/ 版块由模板生成。
 
 module.exports = function (eleventyConfig) {
-  // ---- 现有静态资产:原样拷贝到 _site,内容一字节不动 ----
-  eleventyConfig.addPassthroughCopy("*.html");   // 现有 6+ 个页面
-  eleventyConfig.addPassthroughCopy("*.xml");     // sitemap.xml
-  eleventyConfig.addPassthroughCopy("*.txt");     // robots.txt
-  eleventyConfig.addPassthroughCopy("assets");    // css/js/img/svg
-  eleventyConfig.addPassthroughCopy("admin");     // Decap CMS 后台
-  // CMS 数据 JSON:逐个原样拷贝(不整目录拷,以免和下面 content/news/*.md 的模板处理冲突)
+  // 日期格式化:统一输出 YYYY-MM-DD
+  eleventyConfig.addFilter("ymd", (d) => {
+    if (!d) return "";
+    if (d instanceof Date) return d.toISOString().slice(0, 10);
+    return String(d).slice(0, 10);
+  });
+
+  // 现有手写页面:逐个原样拷贝(排除 news.html —— 被新的 /news/ 列表取代,旧址用 _redirects 301)
+  ["index", "drama", "business", "about", "contact", "legal", "privacy", "404"].forEach((p) =>
+    eleventyConfig.addPassthroughCopy(p + ".html")
+  );
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("assets");   // css/js/img/svg(含新增 news.css)
+  eleventyConfig.addPassthroughCopy("admin");    // Decap CMS 后台
+  // CMS 数据 JSON:逐个原样拷贝(content/news/*.md 走模板处理,不在此列)
   eleventyConfig.addPassthroughCopy("content/settings.json");
   eleventyConfig.addPassthroughCopy("content/home.json");
   eleventyConfig.addPassthroughCopy("content/business.json");
   eleventyConfig.addPassthroughCopy("content/works.json");
+  // 注意:sitemap.xml 现由 sitemap.njk 生成(含文章),不再 passthrough 静态版
 
   return {
     dir: { input: ".", output: "_site", includes: "_includes" },
-    // 只有 njk/md 才当模板处理;.html 一律按上面的 passthrough 原样拷贝(不渲染)
     templateFormats: ["njk", "md"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: false
