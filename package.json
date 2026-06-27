@@ -1,0 +1,13 @@
+{
+  "name": "bizuogehao-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "比昨个好官网 + 行业观察内容版块(Eleventy 静态生成)",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

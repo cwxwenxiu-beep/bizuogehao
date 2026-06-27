@@ -1,0 +1,7 @@
+# Netlify 构建配置(仅本分支/Deploy Preview 生效;main 上没有此文件前,生产站维持原"纯静态、零构建"不变)
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
