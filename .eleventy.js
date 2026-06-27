@@ -1,7 +1,11 @@
 // Eleventy 配置
 // 原则:现有手写页面一律 passthrough 原样拷贝(字节级一致),只新增 /news/ 版块由模板生成。
 
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
+  // 开启 markdown 内联 HTML(用于文章内嵌数据图表)
+  eleventyConfig.setLibrary("md", markdownIt({ html: true, breaks: false, linkify: true }));
   // 日期格式化:统一输出 YYYY-MM-DD
   eleventyConfig.addFilter("ymd", (d) => {
     if (!d) return "";

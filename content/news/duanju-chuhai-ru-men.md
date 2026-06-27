@@ -6,9 +6,70 @@ date: "2026-06-27"
 summary: "从选片、本地化到分发的完整路径——一篇讲清短剧出海怎么做，以及找短剧出海推广公司前你该知道的事。"
 author: "比昨个好编辑部"
 draft: false
+has_charts: true
 ---
 
 竖屏短剧从国内卷到海外，已经成为内容出海里增长最快的赛道之一。但「短剧出海怎么做」对很多内容方来说仍然是个黑箱：剧怎么选、怎么本地化、在哪发、靠什么变现。这篇把整条链路拆开讲清楚。
+
+<div class="data-callout">
+  <div class="data-callout-item">
+    <span class="data-callout-num">+268%</span>
+    <span class="data-callout-label">2025 海外短剧<br>下载量同比</span>
+  </div>
+  <div class="data-callout-item">
+    <span class="data-callout-num">+115%</span>
+    <span class="data-callout-label">2025 内购收入<br>同比增速</span>
+  </div>
+  <div class="data-callout-item">
+    <span class="data-callout-num">&gt;90%</span>
+    <span class="data-callout-label">北美市场<br>收入占比</span>
+  </div>
+  <div class="data-callout-item">
+    <span class="data-callout-num">+270%</span>
+    <span class="data-callout-label">AI 漫剧赛道<br>2025 规模增速</span>
+  </div>
+</div>
+
+<div class="chart-wrap">
+  <p class="chart-title">2025 年海外短剧三大核心增速对比</p>
+  <div style="position:relative;height:180px">
+    <canvas id="growthChart" role="img" aria-label="2025年海外短剧三大增速对比柱状图:下载量+268%、AI漫剧+270%、内购收入+115%">下载量+268%，AI漫剧+270%，内购收入+115%。</canvas>
+  </div>
+  <p class="chart-source">数据来源：Sensor Tower、36氪、CBNData（2026年公开报告）。各家统计口径不同，绝对金额差异较大，此处仅呈现增速方向。</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.getElementById('growthChart');
+  if (!el || typeof Chart === 'undefined') return;
+  new Chart(el, {
+    type: 'bar',
+    data: {
+      labels: ['下载量增速', 'AI漫剧增速', '内购收入增速'],
+      datasets: [{
+        label: '2025同比增长',
+        data: [268, 270, 115],
+        backgroundColor: ['#C0392B', '#C0392B', '#e07b72'],
+        borderRadius: 7,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { callback: function(v){ return v + '%'; } },
+          grid: { color: 'rgba(0,0,0,0.06)' }
+        },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+});
+</script>
 
 ## 一、先想清楚：你出的是「剧」还是「生意」
 
@@ -35,9 +96,19 @@ draft: false
 2. **多语种配音 / 字幕**：母语配音对完播率影响很大；
 3. **节奏适配**：海外平台对前 3 秒、前 1 集的钩子要求更高。
 
-## 四、分发：渠道与节奏
+## 四、分发：主流平台对比
 
-主流渠道包括 TikTok、ReelShort、DramaBox、GoodShort、YouTube Shorts 等。一次制作、多平台多市场同步分发，能摊薄成本、放大曝光。配合达人二创和信息流投放，给剧集做扩散与拉新。
+一次制作、多平台多市场同步分发，能摊薄成本、放大曝光。各平台定位不同，选对渠道比铺满渠道更重要：
+
+| 平台 | 类型 | 主市场 | 变现模式 | 适合场景 |
+|------|------|--------|---------|---------|
+| ReelShort | 付费短剧 | 北美 | 单集解锁 | 高质量剧集首选，门槛较高 |
+| DramaBox | 付费短剧 | 北美 / 东南亚 | 单集解锁 + 订阅 | 下载量领先，受众更广 |
+| GoodShort | 付费短剧 | 北美 | 单集解锁 | 新兴平台，扶持力度大 |
+| TikTok | 免费 + 广告 | 全球 | 广告 + 品牌合作 | 引流测题材，不适合直接付费变现 |
+| YouTube Shorts | 免费 + 广告 | 全球 | 广告分成 | 长内容延伸，适合剪辑推广 |
+
+配合达人二创和信息流投放，给剧集做扩散与拉新，能显著拉低获客成本。
 
 ## 五、找短剧出海推广公司，看什么
 

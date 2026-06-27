@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/news.css">
 <script defer src="/assets/js/main.js"></script>
+{% if has_charts %}<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>{% endif %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":{{ title | dump | safe }},"description":{{ summary | dump | safe }},"image":{{ ((site.domain + cover) if cover else site.logo) | dump | safe }},"datePublished":{{ date | ymd | dump | safe }},"dateModified":{{ (updated if updated else date) | ymd | dump | safe }},"author":{"@type":"Organization","name":{{ site.company | dump | safe }}},"publisher":{"@type":"Organization","name":{{ site.company | dump | safe }},"logo":{"@type":"ImageObject","url":{{ site.logo | dump | safe }}}},"mainEntityOfPage":{{ (site.domain + "/news/" + slug + "/") | dump | safe }},"articleSection":{{ categories[category] | dump | safe }}}
 </script>
