@@ -1,5 +1,14 @@
 /* 行业观察版块样式 —— 仅新增 class，复用现有设计变量，不影响其它页面 */
 
+/* 版块页面包裹（列表/分类/文章）—— 比 .simple 紧凑，空分类页不再留大空洞 */
+.news-page{padding:104px 0 84px}
+.news-page > .container{max-width:min(1080px,calc(100% - 56px))}
+.news-page .eyebrow{margin-bottom:16px}
+.news-page h1{font-size:clamp(1.95rem,3.4vw,2.7rem);font-weight:900;letter-spacing:-.02em;color:var(--ink,#17140f);line-height:1.16;margin:0}
+.news-page.is-article h1{font-size:clamp(1.7rem,2.8vw,2.25rem);max-width:20em;line-height:1.3}
+.news-lead{margin:14px 0 0;font-size:16.5px;color:var(--text);max-width:42em}
+.news-meta{margin:12px 0 0;font-family:var(--label);font-size:13px;color:#9a948c}
+
 /* 分类筛选 */
 .news-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
 .news-tab{
@@ -11,8 +20,12 @@
 .news-tab.is-active{background:var(--red);border-color:var(--red);color:#fff}
 
 /* 文章列表网格 */
-.news-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:6px}
-.news-empty{color:var(--muted,#8a8a8a);font-size:15px}
+.news-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:8px}
+.news-empty{
+  margin-top:30px;text-align:center;color:#8f897f;font-size:15px;line-height:1.85;
+  padding:56px 24px;border:1px dashed var(--line-2);border-radius:18px;background:rgba(23,20,15,.012);
+}
+.news-empty a{color:var(--red);text-decoration:underline;text-underline-offset:3px}
 
 /* 文章卡片 */
 .post-card{

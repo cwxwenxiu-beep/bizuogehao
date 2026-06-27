@@ -9,6 +9,11 @@ module.exports = function (eleventyConfig) {
     return String(d).slice(0, 10);
   });
 
+  // 按分类筛选文章(用于分类页 + 空状态判断)
+  eleventyConfig.addFilter("byCategory", (posts, cat) =>
+    (posts || []).filter((p) => p.data.category === cat)
+  );
+
   // 现有手写页面:逐个原样拷贝(排除 news.html —— 被新的 /news/ 列表取代,旧址用 _redirects 301)
   ["index", "drama", "business", "about", "contact", "legal", "privacy", "404"].forEach((p) =>
     eleventyConfig.addPassthroughCopy(p + ".html")

@@ -10,7 +10,8 @@ eleventyComputed:
   title: "{{ categories[catslug] }}｜行业观察｜比昨个好文化传媒"
   description: "比昨个好文化传媒 · {{ categories[catslug] }}相关的行业观察、实操方法与案例。"
 ---
-<main class="simple"><div class="container">
+{%- set catPosts = collections.post | byCategory(catslug) %}
+<main class="news-page"><div class="container">
   <span class="eyebrow reveal">Insights · 行业观察</span>
   <h1 class="reveal">{{ categories[catslug] }}</h1>
   <div class="news-tabs reveal">
@@ -19,9 +20,13 @@ eleventyComputed:
     <a class="news-tab {% if slug == catslug %}is-active{% endif %}" href="/news/{{ slug }}/">{{ categories[slug] }}</a>
     {%- endfor %}
   </div>
+  {%- if catPosts.length > 0 %}
   <div class="news-list reveal">
-    {%- for post in collections.post | reverse %}
-    {%- if post.data.category == catslug %}{% include "post-card.njk" %}{%- endif %}
+    {%- for post in catPosts | reverse %}
+    {% include "post-card.njk" %}
     {%- endfor %}
   </div>
+  {%- else %}
+  <div class="news-empty reveal">「{{ categories[catslug] }}」的文章正在整理中，先看看 <a href="/news/">全部观察</a> 吧。</div>
+  {%- endif %}
 </div></main>

@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 ---
-<main class="simple"><div class="container">
+<main class="news-page is-article"><div class="container">
   <span class="eyebrow reveal">{{ categories[category] }}</span>
   <h1 class="reveal">{{ title }}</h1>
-  <p class="reveal" style="color:#8a8a8a;font-size:.92rem;margin-top:-6px">{{ date }}{% if author %} · {{ author }}{% endif %}</p>
+  <p class="news-meta reveal">{{ date | ymd }}{% if author %} · {{ author }}{% endif %}</p>
   <article class="news-article reveal">
 {{ content | safe }}
   </article>
-  <div class="actions reveal" style="margin-top:36px"><a class="btn btn-ghost" href="/news.html">← 返回行业观察</a><a class="btn btn-primary" href="/contact.html">聊聊合作 <span class="arr">&#8594;</span></a></div>
+  <div class="actions reveal" style="margin-top:36px"><a class="btn btn-ghost" href="/news/">← 返回行业观察</a><a class="btn btn-primary" href="/contact.html">聊聊合作 <span class="arr">&#8594;</span></a></div>
 </div></main>
