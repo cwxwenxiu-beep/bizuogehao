@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("llms.txt");
+  eleventyConfig.addPassthroughCopy("281d71f59030d170f6917909b1cf4f4d.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
   // assets:拷贝所有文件,但排除未使用的大PNG(已替换为WebP)
   eleventyConfig.addPassthroughCopy("assets", {

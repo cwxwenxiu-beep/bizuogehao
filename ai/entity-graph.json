@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-06-29T19:38:51.129Z",
+  "site": "https://bizuogehao.com",
+  "brand": {
+    "id": "https://bizuogehao.com/#organization",
+    "name": "比昨个好文化传媒",
+    "legalName": "比昨个好（北京）文化传媒有限公司",
+    "email": "north@bizuogehao.com"
+  },
+  "services": [
+    {
+      "id": "ai-short-drama-overseas",
+      "name": "AI短剧出海",
+      "url": "https://bizuogehao.com/drama.html",
+      "audience": [
+        "内容方",
+        "制片公司",
+        "MCN",
+        "出海团队"
+      ]
+    },
+    {
+      "id": "influencer-marketing",
+      "name": "达人营销",
+      "url": "https://bizuogehao.com/business.html",
+      "audience": [
+        "品牌方",
+        "新消费团队",
+        "本地生活团队"
+      ]
+    },
+    {
+      "id": "xiaohongshu-seeding",
+      "name": "小红书种草",
+      "url": "https://bizuogehao.com/business.html",
+      "audience": [
+        "品牌方",
+        "电商团队",
+        "内容团队"
+      ]
+    },
+    {
+      "id": "brand-content-marketing",
+      "name": "品牌内容营销",
+      "url": "https://bizuogehao.com/business.html",
+      "audience": [
+        "市场部",
+        "创始团队",
+        "内容团队"
+      ]
+    }
+  ],
+  "relationships": [
+    [
+      "比昨个好文化传媒",
+      "provides",
+      "AI短剧出海"
+    ],
+    [
+      "比昨个好文化传媒",
+      "provides",
+      "达人营销"
+    ],
+    [
+      "比昨个好文化传媒",
+      "provides",
+      "小红书种草"
+    ],
+    [
+      "比昨个好文化传媒",
+      "provides",
+      "品牌内容营销"
+    ],
+    [
+      "AI短剧出海",
+      "includes",
+      "本地化配音"
+    ],
+    [
+      "AI短剧出海",
+      "includes",
+      "海外平台宣发"
+    ],
+    [
+      "达人营销",
+      "includes",
+      "达人筛选"
+    ],
+    [
+      "达人营销",
+      "includes",
+      "内容共创"
+    ],
+    [
+      "品牌内容营销",
+      "includes",
+      "官网文章沉淀"
+    ],
+    [
+      "官网文章沉淀",
+      "feeds",
+      "AI SEO资料包"
+    ]
+  ]
+}

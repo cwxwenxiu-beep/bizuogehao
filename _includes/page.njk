@@ -21,6 +21,15 @@
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/news.css">
 <script defer src="/assets/js/main.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://bizuogehao.com/#organization","name":{{ site.company | dump | safe }},"alternateName":["比昨个好文化传媒","比昨个好"],"url":"https://bizuogehao.com/","logo":{{ site.logo | dump | safe }},"email":{{ site.email | dump | safe }},"knowsAbout":["AI短剧出海","短剧出海","达人营销","小红书种草","品牌内容营销"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":{{ title | dump | safe }},"url":{{ (site.domain + page.url) | dump | safe }},"description":{{ description | dump | safe }},"isPartOf":{"@type":"WebSite","@id":"https://bizuogehao.com/#website","name":{{ site.name | dump | safe }},"url":"https://bizuogehao.com/"},"publisher":{"@id":"https://bizuogehao.com/#organization"},"inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://bizuogehao.com/"},{"@type":"ListItem","position":2,"name":"行业观察","item":"https://bizuogehao.com/news/"}]}
+</script>
 </head>
 <body data-page="news">
 {% include "header.njk" %}

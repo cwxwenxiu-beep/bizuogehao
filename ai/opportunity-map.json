@@ -1,0 +1,549 @@
+{
+  "generated_at": "2026-06-29T19:38:51.133Z",
+  "site": "https://bizuogehao.com",
+  "purpose": "Content gap map for automatic topic planning and AI SEO/GEO coverage",
+  "next_recommended_topic": {
+    "title": "AI短剧出海费用怎么算？成本结构拆解",
+    "keywords": [
+      "AI短剧出海多少钱",
+      "短剧出海费用",
+      "短剧制作成本"
+    ],
+    "priority": 96,
+    "category": "ai-drama",
+    "cluster_id": "ai-short-drama-overseas",
+    "cluster_name": "AI短剧出海",
+    "covered": false
+  },
+  "clusters": [
+    {
+      "id": "ai-short-drama-overseas",
+      "name": "AI短剧出海",
+      "category": "ai-drama",
+      "keywords": [
+        "AI短剧出海",
+        "短剧出海",
+        "AI短剧制作",
+        "海外短剧"
+      ],
+      "coverage": 63,
+      "covered": 5,
+      "total": 8,
+      "missing": [
+        {
+          "title": "AI短剧出海费用怎么算？成本结构拆解",
+          "keywords": [
+            "AI短剧出海多少钱",
+            "短剧出海费用",
+            "短剧制作成本"
+          ],
+          "priority": 96,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        },
+        {
+          "title": "AI短剧题材怎么选？海外高转化题材拆解",
+          "keywords": [
+            "AI短剧题材",
+            "短剧题材出海",
+            "海外短剧题材"
+          ],
+          "priority": 89,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        },
+        {
+          "title": "短剧出海投放指标：完播率、留存、付费转化怎么看",
+          "keywords": [
+            "短剧投放指标",
+            "短剧完播率",
+            "短剧付费转化"
+          ],
+          "priority": 85,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        }
+      ],
+      "targets": [
+        {
+          "title": "短剧出海怎么做？完整流程和避坑清单",
+          "keywords": [
+            "短剧出海怎么做",
+            "短剧出海流程",
+            "短剧出海避坑"
+          ],
+          "priority": 98,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": true
+        },
+        {
+          "title": "AI短剧出海费用怎么算？成本结构拆解",
+          "keywords": [
+            "AI短剧出海多少钱",
+            "短剧出海费用",
+            "短剧制作成本"
+          ],
+          "priority": 96,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        },
+        {
+          "title": "短剧出海平台怎么选？TikTok、ReelShort、DramaBox对比",
+          "keywords": [
+            "短剧出海平台",
+            "TikTok短剧",
+            "ReelShort",
+            "DramaBox"
+          ],
+          "priority": 94,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": true
+        },
+        {
+          "title": "AI短剧本地化：翻译、配音、口型和文化适配",
+          "keywords": [
+            "AI短剧本地化",
+            "短剧配音",
+            "口型同步"
+          ],
+          "priority": 92,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": true
+        },
+        {
+          "title": "短剧出海内容审核红线：版权、分级与AI标识",
+          "keywords": [
+            "短剧审核",
+            "AI内容标识",
+            "海外平台审核"
+          ],
+          "priority": 91,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": true
+        },
+        {
+          "title": "AI短剧题材怎么选？海外高转化题材拆解",
+          "keywords": [
+            "AI短剧题材",
+            "短剧题材出海",
+            "海外短剧题材"
+          ],
+          "priority": 89,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        },
+        {
+          "title": "真人短剧和AI短剧出海怎么组合？",
+          "keywords": [
+            "真人短剧出海",
+            "AI短剧",
+            "短剧制作组合"
+          ],
+          "priority": 86,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": true
+        },
+        {
+          "title": "短剧出海投放指标：完播率、留存、付费转化怎么看",
+          "keywords": [
+            "短剧投放指标",
+            "短剧完播率",
+            "短剧付费转化"
+          ],
+          "priority": 85,
+          "category": "ai-drama",
+          "cluster_id": "ai-short-drama-overseas",
+          "cluster_name": "AI短剧出海",
+          "covered": false
+        }
+      ]
+    },
+    {
+      "id": "influencer-marketing",
+      "name": "达人营销",
+      "category": "daren",
+      "keywords": [
+        "达人营销",
+        "达人投放",
+        "达人投放代运营",
+        "KOL投放"
+      ],
+      "coverage": 17,
+      "covered": 1,
+      "total": 6,
+      "missing": [
+        {
+          "title": "达人营销费用怎么评估？报价、佣金和内容成本",
+          "keywords": [
+            "达人营销费用",
+            "达人报价",
+            "KOL报价"
+          ],
+          "priority": 93,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "小红书、抖音、快手达人投放怎么分工？",
+          "keywords": [
+            "达人投放平台",
+            "小红书达人",
+            "抖音达人",
+            "快手达人"
+          ],
+          "priority": 92,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "KOL和KOC怎么搭配？品牌种草矩阵打法",
+          "keywords": [
+            "KOL KOC",
+            "种草矩阵",
+            "达人矩阵"
+          ],
+          "priority": 91,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "达人分销适合哪些产品？佣金和转化路径判断",
+          "keywords": [
+            "达人分销",
+            "达人带货",
+            "佣金"
+          ],
+          "priority": 87,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "达人投放效果复盘：互动、搜索、转化和ROI",
+          "keywords": [
+            "达人投放复盘",
+            "投放ROI",
+            "达人营销效果"
+          ],
+          "priority": 86,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        }
+      ],
+      "targets": [
+        {
+          "title": "达人投放代运营怎么做？从选号到复盘",
+          "keywords": [
+            "达人投放代运营",
+            "达人投放怎么做",
+            "KOL投放"
+          ],
+          "priority": 97,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": true
+        },
+        {
+          "title": "达人营销费用怎么评估？报价、佣金和内容成本",
+          "keywords": [
+            "达人营销费用",
+            "达人报价",
+            "KOL报价"
+          ],
+          "priority": 93,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "小红书、抖音、快手达人投放怎么分工？",
+          "keywords": [
+            "达人投放平台",
+            "小红书达人",
+            "抖音达人",
+            "快手达人"
+          ],
+          "priority": 92,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "KOL和KOC怎么搭配？品牌种草矩阵打法",
+          "keywords": [
+            "KOL KOC",
+            "种草矩阵",
+            "达人矩阵"
+          ],
+          "priority": 91,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "达人分销适合哪些产品？佣金和转化路径判断",
+          "keywords": [
+            "达人分销",
+            "达人带货",
+            "佣金"
+          ],
+          "priority": 87,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        },
+        {
+          "title": "达人投放效果复盘：互动、搜索、转化和ROI",
+          "keywords": [
+            "达人投放复盘",
+            "投放ROI",
+            "达人营销效果"
+          ],
+          "priority": 86,
+          "category": "daren",
+          "cluster_id": "influencer-marketing",
+          "cluster_name": "达人营销",
+          "covered": false
+        }
+      ]
+    },
+    {
+      "id": "xiaohongshu-seeding",
+      "name": "小红书种草",
+      "category": "daren",
+      "keywords": [
+        "小红书种草",
+        "小红书达人投放",
+        "小红书代运营"
+      ],
+      "coverage": 25,
+      "covered": 1,
+      "total": 4,
+      "missing": [
+        {
+          "title": "小红书种草怎么做？关键词、达人和笔记结构",
+          "keywords": [
+            "小红书种草怎么做",
+            "小红书关键词",
+            "小红书笔记结构"
+          ],
+          "priority": 95,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        },
+        {
+          "title": "小红书种草如何避免广告味？真实体验内容方法",
+          "keywords": [
+            "小红书广告味",
+            "真实种草",
+            "种草内容"
+          ],
+          "priority": 88,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        },
+        {
+          "title": "小红书搜索沉淀怎么做？从标题到评论区",
+          "keywords": [
+            "小红书搜索",
+            "搜索沉淀",
+            "小红书SEO"
+          ],
+          "priority": 87,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        }
+      ],
+      "targets": [
+        {
+          "title": "小红书种草怎么做？关键词、达人和笔记结构",
+          "keywords": [
+            "小红书种草怎么做",
+            "小红书关键词",
+            "小红书笔记结构"
+          ],
+          "priority": 95,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        },
+        {
+          "title": "小红书达人怎么筛选？账号质量和人群匹配",
+          "keywords": [
+            "小红书达人筛选",
+            "小红书达人投放",
+            "KOC"
+          ],
+          "priority": 90,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": true
+        },
+        {
+          "title": "小红书种草如何避免广告味？真实体验内容方法",
+          "keywords": [
+            "小红书广告味",
+            "真实种草",
+            "种草内容"
+          ],
+          "priority": 88,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        },
+        {
+          "title": "小红书搜索沉淀怎么做？从标题到评论区",
+          "keywords": [
+            "小红书搜索",
+            "搜索沉淀",
+            "小红书SEO"
+          ],
+          "priority": 87,
+          "category": "daren",
+          "cluster_id": "xiaohongshu-seeding",
+          "cluster_name": "小红书种草",
+          "covered": false
+        }
+      ]
+    },
+    {
+      "id": "brand-content-growth",
+      "name": "品牌内容营销",
+      "category": "brand",
+      "keywords": [
+        "品牌内容营销",
+        "内容营销",
+        "品牌种草",
+        "内容增长"
+      ],
+      "coverage": 50,
+      "covered": 2,
+      "total": 4,
+      "missing": [
+        {
+          "title": "品牌内容营销怎么做？从定位到转化闭环",
+          "keywords": [
+            "品牌内容营销怎么做",
+            "内容营销流程",
+            "内容增长"
+          ],
+          "priority": 94,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": false
+        },
+        {
+          "title": "公众号内容如何反哺官网和AI搜索？",
+          "keywords": [
+            "公众号内容沉淀",
+            "AI SEO",
+            "官网内容"
+          ],
+          "priority": 86,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": false
+        }
+      ],
+      "targets": [
+        {
+          "title": "品牌内容营销怎么做？从定位到转化闭环",
+          "keywords": [
+            "品牌内容营销怎么做",
+            "内容营销流程",
+            "内容增长"
+          ],
+          "priority": 94,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": false
+        },
+        {
+          "title": "内容营销和投流怎么配合？预算和节奏建议",
+          "keywords": [
+            "内容营销和投流",
+            "品牌投放",
+            "内容预算"
+          ],
+          "priority": 90,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": true
+        },
+        {
+          "title": "B2B服务品牌怎么做内容营销？",
+          "keywords": [
+            "B2B内容营销",
+            "服务品牌营销",
+            "内容获客"
+          ],
+          "priority": 88,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": true
+        },
+        {
+          "title": "公众号内容如何反哺官网和AI搜索？",
+          "keywords": [
+            "公众号内容沉淀",
+            "AI SEO",
+            "官网内容"
+          ],
+          "priority": 86,
+          "category": "brand",
+          "cluster_id": "brand-content-growth",
+          "cluster_name": "品牌内容营销",
+          "covered": false
+        }
+      ]
+    }
+  ]
+}
