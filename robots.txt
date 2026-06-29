@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /ai/
+# AI-readable context: https://bizuogehao.com/llms.txt
 Sitemap: https://bizuogehao.com/sitemap.xml

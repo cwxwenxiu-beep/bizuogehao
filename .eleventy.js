@@ -23,6 +23,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(p + ".html")
   );
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
   // assets:拷贝所有文件,但排除未使用的大PNG(已替换为WebP)
   eleventyConfig.addPassthroughCopy("assets", {
@@ -37,7 +38,8 @@ module.exports = function (eleventyConfig) {
       return true;
     }
   });
-  eleventyConfig.addPassthroughCopy("admin");    // Decap CMS 后台
+  eleventyConfig.addPassthroughCopy("admin"); // Decap CMS 后台
+  eleventyConfig.addPassthroughCopy("ai");    // AI-readable knowledge files
   // CMS 数据 JSON:逐个原样拷贝(content/news/*.md 走模板处理,不在此列)
   eleventyConfig.addPassthroughCopy("content/settings.json");
   eleventyConfig.addPassthroughCopy("content/home.json");
