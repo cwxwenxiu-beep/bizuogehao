@@ -34,17 +34,20 @@
     reveals.forEach(function(el){el.classList.add('in');});
   }
 
-  // contact form -> mailto (no backend; keeps it honest)
+  // contact form — Netlify Forms 原生提交；本地预览时降级到 mailto
   var form=document.getElementById('contactForm');
   if(form){
-    form.addEventListener('submit',function(ev){
-      ev.preventDefault();
-      var d=new FormData(form);
-      var lines=[];
-      d.forEach(function(v,k){lines.push(k+'：'+v);});
-      var body=encodeURIComponent(lines.join('\n'));
-      var subject=encodeURIComponent('官网合作需求 - '+(d.get('公司名称')||''));
-      window.location.href='mailto:business@bizuogehao.com?subject='+subject+'&body='+body;
-    });
+    var isNetlify=form.hasAttribute('netlify')||form.getAttribute('data-netlify')==='true';
+    if(!isNetlify){
+      form.addEventListener('submit',function(ev){
+        ev.preventDefault();
+        var d=new FormData(form);
+        var lines=[];
+        d.forEach(function(v,k){if(k!=='bot-field'&&k!=='form-name')lines.push(k+'：'+v);});
+        var body=encodeURIComponent(lines.join('\n'));
+        var subject=encodeURIComponent('官网合作需求 - '+(d.get('公司名称')||''));
+        window.location.href='mailto:business@bizuogehao.com?subject='+subject+'&body='+body;
+      });
+    }
   }
 })();

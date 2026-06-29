@@ -45,14 +45,18 @@
         <a class="cmail" data-site="email" href="mailto:business@bizuogehao.com">business@bizuogehao.com</a>
         <div class="qr"><img src="assets/img/wechat-qr.jpg" alt="商务微信二维码" loading="lazy" data-site="qr"><small data-site="qr-note">扫码添加商务微信</small></div>
       </div>
-      <form class="contact-form reveal" id="contactForm">
+      <form class="contact-form reveal" id="contactForm"
+            name="contact" netlify netlify-honeypot="bot-field"
+            action="/contact/?sent=1">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="bot-field" hidden><label>不要填写此栏：<input name="bot-field"></label></p>
         <label>姓名<input name="姓名" required></label>
         <label>公司名称<input name="公司名称" required></label>
         <label>联系方式<input name="联系方式" required></label>
         <label>合作类型<input name="合作类型" required></label>
         <label class="full">目标平台<input name="目标平台"></label>
         <label class="full">项目描述<textarea name="项目描述" required></textarea></label>
-        <p class="note">提交后将通过邮件发送给商务团队；也可直接通过上方邮箱或微信联系。</p>
+        <p class="note">提交后商务团队会在 1 个工作日内联系您；也可直接通过上方邮箱或微信联系。</p>
         <button class="btn btn-primary" type="submit">联系商务 <span class="arr">→</span></button>
       </form>
     </div>
