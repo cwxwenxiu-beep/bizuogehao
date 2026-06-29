@@ -20,21 +20,60 @@
 <meta name="twitter:image" content="{{ (site.domain + cover) if cover else site.logo }}">
 <link rel="canonical" href="{{ site.domain }}/news/{{ slug }}/">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/news.css">
 <script defer src="/assets/js/main.js"></script>
 {% if has_charts %}<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>{% endif %}
+{% if site.ga_id and site.ga_id != "G-XXXXXXXX" %}
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','{{ site.ga_id }}');</script>
+{% endif %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":{{ title | dump | safe }},"description":{{ summary | dump | safe }},"image":{{ ((site.domain + cover) if cover else site.logo) | dump | safe }},"datePublished":{{ date | ymd | dump | safe }},"dateModified":{{ (updated if updated else date) | ymd | dump | safe }},"author":{"@type":"Organization","name":{{ site.company | dump | safe }}},"publisher":{"@type":"Organization","name":{{ site.company | dump | safe }},"logo":{"@type":"ImageObject","url":{{ site.logo | dump | safe }}}},"mainEntityOfPage":{{ (site.domain + "/news/" + slug + "/") | dump | safe }},"articleSection":{{ categories[category] | dump | safe }}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://bizuogehao.com/"},{"@type":"ListItem","position":2,"name":"行业观察","item":"https://bizuogehao.com/news/"},{"@type":"ListItem","position":3,"name":{{ categories[category] | dump | safe }},"item":{{ (site.domain + "/news/" + category + "/") | dump | safe }}},{"@type":"ListItem","position":4,"name":{{ title | dump | safe }}}]}
 </script>
+{% if faq %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{%- for item in faq %}
+{"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}}{% if not loop.last %},{% endif %}
+{%- endfor %}
+]}
+</script>
+{% endif %}
 </head>
 <body data-page="news">
 {% include "header.njk" %}
+<nav class="breadcrumb" aria-label="面包屑导航">
+  <a href="/">首页</a><span class="sep">/</span>
+  <a href="/news/">行业观察</a><span class="sep">/</span>
+  <a href="/news/{{ category }}/">{{ categories[category] }}</a><span class="sep">/</span>
+  <span class="current">{{ title }}</span>
+</nav>
 {{ content | safe }}
+
+{%- set related = collections.post | byCategory(category) | rejectattr("data.slug", "equalto", slug) | list %}
+{%- if related.length > 0 %}
+<aside class="news-related">
+  <h3>相关文章</h3>
+  <div class="news-list" style="margin-top:12px">
+  {%- for p in related.slice(0, 3) %}
+    <a class="post-card" href="{{ p.url }}">
+      <div class="post-card-body">
+        <span class="post-card-cat">{{ categories[p.data.category] }}</span>
+        <span class="post-card-title">{{ p.data.title }}</span>
+        <span class="post-card-date">{{ p.data.date | ymd }}</span>
+      </div>
+    </a>
+  {%- endfor %}
+  </div>
+</aside>
+{%- endif %}
+
 {% include "footer.njk" %}
+<script>document.querySelectorAll('.news-article img:not([loading])').forEach(function(i){i.loading='lazy';i.decoding='async'});</script>
 </body>
 </html>

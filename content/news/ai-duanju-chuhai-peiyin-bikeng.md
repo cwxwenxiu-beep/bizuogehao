@@ -4,7 +4,7 @@ slug: "ai-duanju-chuhai-peiyin-bikeng"
 category: "ai-drama"
 date: "2026-06-28"
 summary: "本文聚焦AI短剧出海中的本地化配音关键环节，系统梳理从口型同步、情感适配到多语言成本控制的常见陷阱与解决方案。结合AIGC工具能力与行业实践，帮助短剧制作团队在剧本生成、AI视频合成阶段提前规避配音风险，提升海外市场接受度与投放效率。"
-keywords: ["AI短剧", "短剧制作", "AIGC", "微短剧", "剧本生成", "AI视频"]
+keywords: ["AI短剧配音", "短剧本地化", "出海配音", "AI语音合成", "口型同步"]
 author: "比昨个好编辑部"
 draft: false
 ---

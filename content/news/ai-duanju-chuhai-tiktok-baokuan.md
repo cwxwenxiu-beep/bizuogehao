@@ -4,7 +4,7 @@ slug: "ai-duanju-chuhai-tiktok-baokuan"
 category: "ai-drama"
 date: "2026-06-29"
 summary: "本文从AI短剧出海的实际痛点出发，拆解TikTok爆款短剧的共性特征，包括剧情节奏、视觉风格与投放策略。同时梳理制作全流程中的常见陷阱——从剧本生成到AI视频渲染，提供可落地的避坑建议，帮助从业者更高效地利用AIGC工具打造全球化微短剧内容。"
-keywords: ["AI短剧", "短剧制作", "AIGC", "微短剧", "剧本生成", "AI视频"]
+keywords: ["TikTok短剧", "短剧爆款", "AI短剧TikTok", "短剧拆解", "短视频运营"]
 author: "比昨个好编辑部"
 draft: false
 ---

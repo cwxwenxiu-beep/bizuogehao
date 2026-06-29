@@ -4,6 +4,7 @@ slug: "pinpai-neirong-yingxiao"
 category: "brand"
 date: "2026-06-26"
 summary: "内容营销不是多发几篇推文，而是把品牌做成「能被相信的内容」。这篇讲清品牌内容营销是什么、和投流的区别，以及怎么从品牌到种草到转化一条线落地。"
+keywords: ["品牌内容营销", "内容营销策略", "品牌种草", "营销转化", "内容获客"]
 author: "比昨个好编辑部"
 draft: false
 ---

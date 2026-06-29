@@ -4,6 +4,7 @@ slug: "daren-toufang-dai-yunying"
 category: "daren"
 date: "2026-06-24"
 summary: "达人投放不是把钱撒给一堆账号就完事。这篇拆解达人投放代运营的完整流程：定目标、选号、谈合作、内容把控、投放放大到数据结案。"
+keywords: ["达人投放", "达人营销", "小红书投放", "达人代运营", "品牌种草"]
 author: "比昨个好编辑部"
 draft: false
 ---

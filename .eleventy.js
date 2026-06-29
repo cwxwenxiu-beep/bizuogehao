@@ -24,7 +24,19 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
-  eleventyConfig.addPassthroughCopy("assets");   // css/js/img/svg(含新增 news.css)
+  // assets:拷贝所有文件,但排除未使用的大PNG(已替换为WebP)
+  eleventyConfig.addPassthroughCopy("assets", {
+    filter: path => {
+      const name = path.split(/[\/\\]/).pop() || "";
+      // 排除未被引用的文件
+      if (name === "10.png" || name === "10.webp") return false;
+      if (name === "17.png" || name === "17.webp") return false;
+      if (name.includes("chatgpt-image")) return false;
+      // 其他PNG已换WebP,不拷贝(仅保留logo-mark.png)
+      if (name.endsWith(".png") && name !== "logo-mark.png") return false;
+      return true;
+    }
+  });
   eleventyConfig.addPassthroughCopy("admin");    // Decap CMS 后台
   // CMS 数据 JSON:逐个原样拷贝(content/news/*.md 走模板处理,不在此列)
   eleventyConfig.addPassthroughCopy("content/settings.json");

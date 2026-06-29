@@ -4,6 +4,7 @@ slug: "duanju-chuhai-ru-men"
 category: "ai-drama"
 date: "2026-06-27"
 summary: "从选片、本地化到分发的完整路径——一篇讲清短剧出海怎么做，以及找短剧出海推广公司前你该知道的事。"
+keywords: ["短剧出海入门", "短剧出海流程", "海外短剧平台", "短剧本地化", "短剧变现"]
 author: "比昨个好编辑部"
 draft: false
 has_charts: true

@@ -4,7 +4,7 @@ slug: "ai-duanju-chuhai-tiktok-fu-fei"
 category: "ai-drama"
 date: "2026-06-28"
 summary: "TikTok正在小范围测试付费短剧功能，这标志着AI短剧出海迎来商业化新拐点。本文从平台政策、制作成本、内容适配等角度，分析AIGC如何降低微短剧出海门槛，并探讨剧本生成与AI视频技术在TikTok生态下的机会与挑战。"
-keywords: ["AI短剧", "短剧制作", "AIGC", "微短剧", "剧本生成", "AI视频"]
+keywords: ["TikTok付费短剧", "短剧变现", "AI短剧商业化", "付费内容", "短剧出海盈利"]
 author: "比昨个好编辑部"
 draft: false
 ---

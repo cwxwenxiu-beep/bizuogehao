@@ -4,7 +4,7 @@ slug: "ai-duanju-hangye-dongtai-xinzuo-guancha"
 category: "ai-drama"
 date: "2026-06-28"
 summary: "本周AI短剧行业持续升温，多家平台加速布局AIGC短剧制作，新作在剧本生成与视频质量上均有突破。本文梳理了行业动态、技术趋势及代表性新作，为从业者提供内容创作与出海策略参考。"
-keywords: ["AI短剧", "短剧制作", "AIGC", "微短剧", "剧本生成", "AI视频"]
+keywords: ["AI短剧行业", "短剧新作", "AIGC短剧动态", "短剧市场趋势", "微短剧行业"]
 author: "比昨个好编辑部"
 draft: false
 ---
