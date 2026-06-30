@@ -5,6 +5,18 @@ category: "distribution"
 date: "2026-07-01"
 summary: "A practical guide to distributing short drama content on TikTok, ReelShort, DramaBox and YouTube Shorts — covering platform selection, localization requirements and revenue models."
 keywords: ["short drama distribution", "distribute short drama", "ReelShort distribution", "DramaBox content", "short drama platform guide"]
+takeaways:
+  - "Each major platform has a different revenue model and content bar — don't treat them as interchangeable"
+  - "Localization quality is the single biggest predictor of international success — literal translation doesn't work"
+  - "Plan 3–6 months before meaningful revenue from a new title — distribution is a portfolio game"
+  - "Having platform relationships shortens time-to-live by 4–6 weeks versus applying cold"
+faq:
+  - q: "How do I start distributing my short drama internationally?"
+    a: "The first step is localization — your content needs professional English subtitles or dubbing before any platform will accept it. Then identify which platform matches your genre and production quality: ReelShort for premium live-action, DramaBox for broader reach including AI drama, TikTok for discovery and audience building. Having a distribution partner who already has platform relationships significantly speeds up the onboarding process."
+  - q: "How long does short drama distribution take?"
+    a: "From content submission to going live typically takes 3–8 weeks depending on the platform and whether you have existing relationships. ReelShort's content review is thorough and takes 4–8 weeks. DramaBox is faster at 3–6 weeks. TikTok is immediate but monetization review takes 1–2 weeks."
+  - q: "What genres work best for international short drama distribution?"
+    a: "In North America, the top-performing genres are billionaire romance, revenge drama, supernatural and mystery. In Southeast Asia, sweet romance, family drama and idol drama perform strongly. Middle East markets respond well to modest romance and family conflict stories. Genre-market fit is critical — a genre that dominates domestically may underperform in a new market."
 draft: false
 ---
 

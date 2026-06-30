@@ -5,6 +5,18 @@ category: "production"
 date: "2026-07-01"
 summary: "A comparison of AI-assisted short drama production vs overseas live-action production — cost, speed, market fit and when to use each for international distribution."
 keywords: ["AI short drama", "AI drama production", "short drama production", "vertical drama format", "ai drama overseas"]
+takeaways:
+  - "AI drama costs 10–30x less than live-action — ideal for testing new markets before committing to production"
+  - "Live-action still drives higher completion rates and willingness to pay per episode on North American premium platforms"
+  - "The winning strategy: use AI drama to validate markets, then invest in live-action for proven winners"
+  - "Localization quality is non-negotiable for both formats — it's the #1 success factor regardless of production type"
+faq:
+  - q: "Is AI short drama accepted on ReelShort and DramaBox?"
+    a: "DramaBox actively acquires AI drama content and it performs well on the platform, particularly for romance and slice-of-life genres. ReelShort's acceptance of full AI-generated drama is more limited — it currently favors live-action production quality. AI-assisted live-action (real actors with AI tools for production efficiency) is accepted and common on both platforms."
+  - q: "How much cheaper is AI drama vs live-action short drama?"
+    a: "Full AI-generated drama (50 episodes) typically costs $5,000–$20,000 to produce including localization. An equivalent live-action production with a Chinese crew costs $50,000–$150,000+. Live-action with a North American cast and crew for Western markets costs $150,000–$400,000+. The cost differential is why studios use AI drama to test concepts before investing in live-action."
+  - q: "What is AI漫剧 (AI manhua drama)?"
+    a: "AI漫剧 refers to short dramas created using AI-generated comic-style or animated imagery, rather than live actors. These are distinct from live-action drama produced with AI tools. AI漫剧 has a dedicated and growing audience in China and is gaining international acceptance, particularly in Southeast Asia. Production costs are at the lower end of the AI drama range."
 draft: false
 ---
 

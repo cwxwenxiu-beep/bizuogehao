@@ -14,11 +14,12 @@
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="{{ title }}">
   <meta name="twitter:description" content="{{ summary }}">
-  <link rel="canonical"                 href="https://bizuogehao.com/en/news/{{ slug }}/">
-  <link rel="alternate" hreflang="en"       href="https://bizuogehao.com/en/news/{{ slug }}/">
-  <link rel="alternate" hreflang="zh-CN"    href="https://bizuogehao.com/">
+  <link rel="canonical"                  href="https://bizuogehao.com/en/news/{{ slug }}/">
+  <link rel="alternate" hreflang="en"        href="https://bizuogehao.com/en/news/{{ slug }}/">
+  <link rel="alternate" hreflang="zh-CN"     href="https://bizuogehao.com/">
   <link rel="alternate" hreflang="x-default" href="https://bizuogehao.com/en/news/{{ slug }}/">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,22 +47,30 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
   {%- for item in faq %}
-  {"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}}{% if not loop.last %},{% endif %}
+  {"@type":"Question","name":{{ item.q | dump | safe }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | dump | safe }}}}{% if not loop.last %},{% endif %}
   {%- endfor %}
   ]}
   </script>
   {% endif %}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" media="print" onload="this.media='all'"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+  </noscript>
   <style>
-    :root{--red:#ce3b2b;--ink:#15171c;--muted:#6b7280;--line:#e5e7eb;--soft:#f6f7f9}
+    :root{--red:#ce3b2b;--ink:#15171c;--muted:#6b7280;--line:#e5e7eb;--soft:#f6f7f9;--green:#15803d;--green-bg:#f0fdf4;--green-line:#bbf7d0}
     *{box-sizing:border-box}
     body{margin:0;color:var(--ink);background:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
-    /* header */
-    .en-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+
+    /* ── reading progress bar ─────────────────────────── */
+    #pbar{position:fixed;top:0;left:0;height:3px;background:var(--red);width:0%;z-index:200;transition:width .08s linear;will-change:width}
+
+    /* ── sticky header ────────────────────────────────── */
+    .en-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
     .en-nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1160px,calc(100% - 40px));margin:0 auto}
     .en-brand{display:flex;align-items:center;gap:9px;color:var(--ink)}
     .en-brand img{width:28px;height:28px}
@@ -70,45 +79,130 @@
     .en-nav-links a:hover{color:var(--red)}
     .en-nav-cta{padding:6px 14px;background:var(--ink);color:#fff;border-radius:6px;font-size:12px;font-weight:700;white-space:nowrap}
     .en-nav-cta:hover{background:#2d3748}
-    /* breadcrumb */
+
+    /* ── breadcrumb ───────────────────────────────────── */
     .en-breadcrumb{padding:10px 0;font-size:12px;color:var(--muted);width:min(1160px,calc(100% - 40px));margin:0 auto}
     .en-breadcrumb a{color:var(--muted)}
     .en-breadcrumb a:hover{color:var(--red)}
     .en-breadcrumb .sep{margin:0 6px}
-    /* article */
+
+    /* ── layout ───────────────────────────────────────── */
     .en-article-wrap{width:min(760px,calc(100% - 40px));margin:40px auto 64px}
-    .en-article-wrap h1{font-size:clamp(26px,4vw,42px);line-height:1.1;margin:0 0 12px;font-weight:900}
-    .en-article-meta{color:var(--muted);font-size:13px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+
+    /* ── title & meta ─────────────────────────────────── */
+    .en-article-wrap h1{font-size:clamp(26px,4vw,42px);line-height:1.1;margin:0 0 14px;font-weight:900}
+    .en-article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:var(--muted);font-size:13px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+    .meta-badge{display:inline-flex;align-items:center;gap:5px;background:var(--soft);border:1px solid var(--line);border-radius:4px;padding:2px 8px;font-size:12px;font-weight:600;color:var(--muted)}
+
+    /* ── key takeaways ────────────────────────────────── */
+    .takeaways{background:var(--green-bg);border:1px solid var(--green-line);border-radius:8px;padding:18px 22px;margin:0 0 28px}
+    .takeaways-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--green);margin:0 0 10px;display:flex;align-items:center;gap:6px}
+    .takeaways-label::before{content:"✓";font-size:13px}
+    .takeaways ul{margin:0;padding-left:18px}
+    .takeaways li{font-size:15px;line-height:1.5;color:#1f2937;margin-bottom:7px}
+    .takeaways li:last-child{margin-bottom:0}
+
+    /* ── table of contents ────────────────────────────── */
+    .toc-box{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin:0 0 28px}
+    .toc-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px;display:flex;align-items:center;justify-content:space-between}
+    .toc-label button{background:none;border:none;font-size:11px;font-weight:700;color:var(--muted);cursor:pointer;padding:0;font-family:inherit}
+    .toc-list{margin:0;padding:0;list-style:none;counter-reset:toc}
+    .toc-list li{border-top:1px solid var(--line)}
+    .toc-list li:first-child{border-top:none}
+    .toc-list a{display:block;padding:8px 0;font-size:14px;color:var(--ink);line-height:1.35;counter-increment:toc}
+    .toc-list a::before{content:counter(toc) ". ";color:var(--muted);font-size:12px;font-weight:700}
+    .toc-list a:hover{color:var(--red)}
+    .toc-list a.toc-active{color:var(--red);font-weight:700}
+    .toc-collapsed .toc-list{display:none}
+
+    /* ── article body ─────────────────────────────────── */
     .en-article-body{font-size:16px;line-height:1.78;color:#374151}
-    .en-article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink)}
+    .en-article-body h2{font-size:22px;font-weight:800;margin:36px 0 14px;color:var(--ink);scroll-margin-top:80px}
     .en-article-body h3{font-size:17px;font-weight:700;margin:26px 0 10px;color:var(--ink)}
     .en-article-body p{margin:0 0 16px}
     .en-article-body ul,.en-article-body ol{margin:0 0 16px;padding-left:22px}
-    .en-article-body li{margin-bottom:6px}
+    .en-article-body li{margin-bottom:7px}
     .en-article-body strong{font-weight:700;color:var(--ink)}
-    .en-article-body a{color:var(--red);text-decoration:underline}
+    .en-article-body a{color:var(--red);text-decoration:underline;text-underline-offset:2px}
     .en-article-body hr{border:none;border-top:1px solid var(--line);margin:28px 0}
     .en-article-body blockquote{margin:24px 0;padding:14px 18px;border-left:3px solid var(--red);background:#fef2f2;border-radius:0 6px 6px 0;font-style:italic}
     .en-article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
     .en-article-body th{background:var(--soft);padding:10px 12px;text-align:left;font-weight:700;border:1px solid var(--line)}
-    .en-article-body td{padding:9px 12px;border:1px solid var(--line)}
-    .en-article-actions{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+    .en-article-body td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+    .en-article-body tr:hover td{background:#fafafa}
+
+    /* ── mid-article CTA ──────────────────────────────── */
+    .mid-cta{background:var(--ink);color:#fff;border-radius:10px;padding:22px 26px;margin:32px 0;display:flex;align-items:center;gap:20px}
+    .mid-cta-text{flex:1;min-width:0}
+    .mid-cta-title{font-size:15px;font-weight:800;margin:0 0 3px}
+    .mid-cta-sub{font-size:12px;color:#9ca3af;margin:0;line-height:1.4}
+    .mid-cta-btn{padding:9px 16px;background:var(--red);color:#fff;border-radius:6px;font-weight:700;font-size:13px;white-space:nowrap;flex-shrink:0}
+    .mid-cta-btn:hover{background:#b91c1c}
+
+    /* ── FAQ section ──────────────────────────────────── */
+    .faq-section{margin:36px 0}
+    .faq-section-title{font-size:20px;font-weight:800;margin:0 0 16px;color:var(--ink)}
+    .faq-item{border-bottom:1px solid var(--line);padding:14px 0}
+    .faq-item:first-of-type{border-top:1px solid var(--line)}
+    .faq-q{font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4}
+    .faq-q::after{content:"+";font-size:20px;font-weight:400;color:var(--muted);flex-shrink:0;transition:transform .2s}
+    .faq-item.open .faq-q::after{transform:rotate(45deg)}
+    .faq-a{font-size:14px;color:#4b5563;line-height:1.65;margin:10px 0 0;display:none}
+    .faq-item.open .faq-a{display:block}
+
+    /* ── author bio ───────────────────────────────────── */
+    .author-bio{display:flex;align-items:flex-start;gap:14px;background:var(--soft);border-radius:10px;padding:20px;margin:36px 0}
+    .author-avatar{width:48px;height:48px;border-radius:999px;background:var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;font-weight:900;flex-shrink:0}
+    .author-bio-name{font-weight:800;font-size:15px;margin:0 0 4px}
+    .author-bio-desc{font-size:13px;color:var(--muted);margin:0;line-height:1.55}
+
+    /* ── share nudge ──────────────────────────────────── */
+    .share-nudge{text-align:center;padding:18px;background:var(--soft);border-radius:8px;margin:20px 0;border:1px solid var(--line)}
+    .share-nudge p{font-size:13px;color:var(--muted);margin:0 0 10px}
+    .copy-btn{padding:7px 16px;background:#fff;border:1px solid var(--line);border-radius:5px;font-size:13px;font-weight:700;cursor:pointer;color:var(--ink);font-family:inherit;transition:border-color .15s}
+    .copy-btn:hover{border-color:var(--ink)}
+    .copy-btn.copied{color:var(--green);border-color:var(--green-line);background:var(--green-bg)}
+
+    /* ── related articles ─────────────────────────────── */
+    .related-section{margin:36px 0}
+    .section-eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:14px}
+    .related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .related-card{border:1px solid var(--line);border-radius:8px;padding:15px;transition:box-shadow .15s,border-color .15s}
+    .related-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.07);border-color:#d1d5db}
+    .related-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+    .related-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.35}
+    .related-arrow{font-size:12px;color:var(--red);margin-top:6px}
+
+    /* ── bottom actions ───────────────────────────────── */
+    .en-article-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
     .en-btn{display:inline-flex;align-items:center;padding:10px 20px;border-radius:7px;font-weight:700;font-size:14px}
     .en-btn-primary{background:var(--red);color:#fff}
+    .en-btn-primary:hover{background:#b91c1c}
     .en-btn-ghost{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
-    /* footer */
+    .en-btn-ghost:hover{border-color:#9ca3af}
+
+    /* ── footer ───────────────────────────────────────── */
     .en-footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13px;margin-top:40px}
     .en-footer-inner{width:min(1160px,calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .en-footer-links{display:flex;gap:16px}
     .en-footer-links a:hover{color:var(--red)}
-    @media(max-width:640px){.en-nav-links{display:none}.en-article-wrap{margin-top:24px}}
+
+    @media(max-width:640px){
+      .en-nav-links{display:none}
+      .en-article-wrap{margin-top:24px}
+      .related-grid{grid-template-columns:1fr}
+      .mid-cta{flex-direction:column;gap:14px}
+    }
   </style>
 </head>
 <body>
+  <!-- reading progress bar -->
+  <div id="pbar" aria-hidden="true"></div>
+
   <header class="en-header">
     <div class="en-nav">
       <a class="en-brand" href="/en/">
-        <img src="/assets/img/logo-mark.png" alt="Better Than Yesterday Studio">
+        <img src="/assets/img/logo-mark.png" alt="Better Than Yesterday Studio" width="28" height="28">
         <span>Better Than Yesterday Studio</span>
       </a>
       <nav class="en-nav-links" aria-label="Site navigation">
@@ -129,10 +223,89 @@
 
   <main class="en-article-wrap">
     <h1>{{ title }}</h1>
-    <p class="en-article-meta">{{ date | ymd }}{% if author %} · {{ author }}{% endif %}</p>
-    <div class="en-article-body">{{ content | safe }}</div>
+
+    <div class="en-article-meta">
+      <span>{{ date | ymd }}</span>
+      <span id="reading-time" class="meta-badge" style="display:none">📖 — min read</span>
+      {% if category %}<span class="meta-badge">{{ category }}</span>{% endif %}
+      {% if updated %}<span>Updated {{ updated | ymd }}</span>{% endif %}
+    </div>
+
+    <!-- Key Takeaways (market best practice: set expectations immediately) -->
+    {% if takeaways %}
+    <div class="takeaways">
+      <div class="takeaways-label">Key Takeaways</div>
+      <ul>
+        {%- for t in takeaways %}<li>{{ t }}</li>{%- endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <!-- Table of Contents (auto-built from H2 headings by JS) -->
+    <div class="toc-box" id="toc-box" style="display:none" aria-label="Table of contents">
+      <div class="toc-label">
+        In This Article
+        <button onclick="toggleToc()" id="toc-toggle">Collapse</button>
+      </div>
+      <ol class="toc-list" id="toc-list"></ol>
+    </div>
+
+    <div class="en-article-body" id="article-body">{{ content | safe }}</div>
+
+    <!-- FAQ Section (visual, matches FAQPage schema for featured snippets) -->
+    {% if faq %}
+    <div class="faq-section">
+      <h2 class="faq-section-title">Frequently Asked Questions</h2>
+      {%- for item in faq %}
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">{{ item.q }}</div>
+        <div class="faq-a">{{ item.a }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Author Bio -->
+    <div class="author-bio">
+      <div class="author-avatar">B</div>
+      <div>
+        <div class="author-bio-name">Better Than Yesterday Studio</div>
+        <p class="author-bio-desc">Beijing-based short drama studio. We distribute AI drama and live-action content to global platforms (TikTok, ReelShort, DramaBox), handle end-to-end localization, and run creator marketing for Chinese studios going global. <a href="/en/#contact" style="color:var(--red);text-decoration:underline">Ask us about your project →</a></p>
+      </div>
+    </div>
+
+    <!-- Share Nudge -->
+    <div class="share-nudge">
+      <p>Found this useful? Share it with your team.</p>
+      <button class="copy-btn" id="copy-btn" onclick="copyLink()">Copy Article Link</button>
+    </div>
+
+    <!-- Related Articles -->
+    {%- if collections.enpost %}
+    {%- set otherPosts = [] %}
+    {%- for post in collections.enpost | reverse %}
+      {%- if post.data.slug != slug %}
+        {%- set otherPosts = (otherPosts.push(post), otherPosts) %}
+      {%- endif %}
+    {%- endfor %}
+    {%- if otherPosts.length > 0 %}
+    <div class="related-section">
+      <div class="section-eyebrow">More Insights</div>
+      <div class="related-grid">
+        {%- for post in otherPosts | first(4) %}
+        <a class="related-card" href="{{ post.url }}">
+          <div class="related-cat">{{ post.data.category }}</div>
+          <div class="related-title">{{ post.data.title }}</div>
+          <div class="related-arrow">Read →</div>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- endif %}
+
     <div class="en-article-actions">
-      <a class="en-btn en-btn-ghost" href="/en/news/">← Back to Insights</a>
+      <a class="en-btn en-btn-ghost" href="/en/news/">← All Insights</a>
       <a class="en-btn en-btn-primary" href="/en/#contact">Talk to Our Team →</a>
     </div>
   </main>
@@ -148,5 +321,96 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  (function(){
+    var body = document.getElementById('article-body');
+
+    // ── reading time ──────────────────────────────
+    if (body) {
+      var words = body.innerText.split(/\s+/).filter(Boolean).length;
+      var mins  = Math.max(1, Math.round(words / 220));
+      var rt    = document.getElementById('reading-time');
+      if (rt) { rt.textContent = '📖 ' + mins + ' min read'; rt.style.display = ''; }
+    }
+
+    // ── table of contents ─────────────────────────
+    var headings = body ? Array.from(body.querySelectorAll('h2')) : [];
+    if (headings.length >= 3) {
+      var box  = document.getElementById('toc-box');
+      var list = document.getElementById('toc-list');
+      headings.forEach(function(h, i) {
+        if (!h.id) h.id = 'sec-' + i;
+        var li = document.createElement('li');
+        var a  = document.createElement('a');
+        a.href        = '#' + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      box.style.display = 'block';
+
+      // highlight active section
+      var links = Array.from(list.querySelectorAll('a'));
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            links.forEach(function(l){ l.classList.remove('toc-active'); });
+            var active = links.find(function(l){ return l.getAttribute('href') === '#' + e.target.id; });
+            if (active) active.classList.add('toc-active');
+          }
+        });
+      }, { rootMargin: '-10% 0px -75% 0px' });
+      headings.forEach(function(h){ observer.observe(h); });
+    }
+
+    // ── inject mid-article CTA after 3rd paragraph ─
+    if (body) {
+      var paras = Array.from(body.querySelectorAll('p'));
+      if (paras.length > 4) {
+        var target = paras[3];
+        var cta = document.createElement('div');
+        cta.className = 'mid-cta';
+        cta.innerHTML = '<div class="mid-cta-text"><div class="mid-cta-title">Distributing short drama internationally?</div><p class="mid-cta-sub">We handle distribution, localization and creator amplification. Reach out for a free strategy call.</p></div><a class="mid-cta-btn" href="/en/#contact">Get in Touch</a>';
+        target.after(cta);
+      }
+    }
+
+    // ── reading progress bar ──────────────────────
+    var pbar = document.getElementById('pbar');
+    window.addEventListener('scroll', function() {
+      var doc = document.documentElement;
+      var pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+      pbar.style.width = Math.min(100, pct) + '%';
+    }, { passive: true });
+
+    // ── copy link ─────────────────────────────────
+    window.copyLink = function() {
+      navigator.clipboard.writeText(location.href).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = '✓ Copied!';
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.textContent = 'Copy Article Link'; btn.classList.remove('copied'); }, 2200);
+      }).catch(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = location.href;
+      });
+    };
+
+    // ── FAQ accordion ─────────────────────────────
+    window.toggleFaq = function(el) {
+      var item = el.parentElement;
+      item.classList.toggle('open');
+    };
+
+    // ── TOC collapse ──────────────────────────────
+    window.toggleToc = function() {
+      var box    = document.getElementById('toc-box');
+      var toggle = document.getElementById('toc-toggle');
+      var collapsed = box.classList.toggle('toc-collapsed');
+      toggle.textContent = collapsed ? 'Expand' : 'Collapse';
+    };
+  })();
+  </script>
 </body>
 </html>

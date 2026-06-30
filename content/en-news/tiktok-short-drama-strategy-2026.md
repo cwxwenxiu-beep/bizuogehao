@@ -5,6 +5,18 @@ category: "strategy"
 date: "2026-07-01"
 summary: "How Chinese short drama studios are winning global TikTok audiences — from hook writing and subtitle strategy to creator co-creation and paid amplification."
 keywords: ["TikTok short drama", "short drama TikTok strategy", "vertical drama TikTok", "TikTok drama hooks", "drama content TikTok"]
+takeaways:
+  - "Your hook must create a question in the viewer's mind within 3 seconds or they scroll away"
+  - "Post 1–2 episodes per day for the first 7 days — TikTok's algorithm rewards consistent cadence"
+  - "Creator co-creation (reactions, POV dubs, recaps) multiplies reach more than your own posts"
+  - "TikTok drives discovery; ReelShort/DramaBox drive revenue — architect the pipeline deliberately"
+faq:
+  - q: "How many views do you need on TikTok for short drama to matter?"
+    a: "There's no fixed threshold, but studios typically see meaningful subscriber acquisition on paid platforms when TikTok series reach 500K+ cumulative views across a series. The conversion rate from TikTok view to ReelShort/DramaBox subscriber varies from 0.5% to 3% depending on how compelling the cliffhanger is and how clear the call to action (follow for episodes) is."
+  - q: "Should short drama have its own TikTok account?"
+    a: "For a serialized drama with strong brand identity, a dedicated TikTok account typically outperforms posting to a brand main account. The dedicated account signals to the algorithm that it's a drama content channel, which improves distribution to drama-interested audiences. It also builds a subscriber base that transfers to future titles in the same genre."
+  - q: "What is Spark Ads and why does it matter for short drama?"
+    a: "Spark Ads lets you amplify your existing organic TikTok posts rather than creating separate ad creatives. For drama content, this preserves the social proof (likes, comments, shares) accumulated on the organic post, which makes the ad feel more authentic and typically improves click-through rates by 20–40% versus standard in-feed ads. It's the recommended format for drama episode launches."
 draft: false
 ---
 
