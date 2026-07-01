@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T19:33:08.729Z",
+  "generated_at": "2026-07-01T20:22:17.389Z",
   "site": "https://bizuogehao.com",
   "purpose": "Content gap map for automatic topic planning and AI SEO/GEO coverage",
   "next_recommended_topic": {
@@ -26,23 +26,10 @@
         "AI短剧制作",
         "海外短剧"
       ],
-      "coverage": 75,
-      "covered": 6,
+      "coverage": 88,
+      "covered": 7,
       "total": 8,
       "missing": [
-        {
-          "title": "AI短剧题材怎么选？海外高转化题材拆解",
-          "keywords": [
-            "AI短剧题材",
-            "短剧题材出海",
-            "海外短剧题材"
-          ],
-          "priority": 89,
-          "category": "ai-drama",
-          "cluster_id": "ai-short-drama-overseas",
-          "cluster_name": "AI短剧出海",
-          "covered": false
-        },
         {
           "title": "短剧出海投放指标：完播率、留存、付费转化怎么看",
           "keywords": [
@@ -135,7 +122,7 @@
           "category": "ai-drama",
           "cluster_id": "ai-short-drama-overseas",
           "cluster_name": "AI短剧出海",
-          "covered": false
+          "covered": true
         },
         {
           "title": "真人短剧和AI短剧出海怎么组合？",

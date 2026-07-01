@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T19:33:08.721Z",
+  "generated_at": "2026-07-01T20:22:17.380Z",
   "site": "https://bizuogehao.com",
   "answers": [
     {
@@ -203,6 +203,11 @@
       "source": "https://bizuogehao.com/news/ai-duanju-chuhai-chengben-jiexi/"
     },
     {
+      "question": "关于「AI短剧题材选择与出海高转化策略：品牌方与内容方的实战指南」有什么要点？",
+      "answer": "本文从AI短剧题材选择与海外高转化角度出发，系统拆解了当前短剧出海市场的题材趋势、用户偏好与AIGC工具的应用逻辑。内容涵盖欧美、东南亚、中东等市场的题材差异，以及如何通过数据驱动与剧本生成技术提升短剧转化率，为AI短剧制作团队提供可执行的选题策略。 详细内容见 https://bizuogehao.com/news/ai-duanju-ticai-xuanze-chuhai/",
+      "source": "https://bizuogehao.com/news/ai-duanju-ticai-xuanze-chuhai/"
+    },
+    {
       "question": "关于「近期爆款短剧拆解：流量密码与变现逻辑」有什么要点？",
       "answer": "本文从选题、节奏、投流、变现四个维度，拆解近期多部爆款短剧的共性规律，帮助品牌方与出海从业者理解「为什么它能火」，并提炼可复用的内容策略。 详细内容见 https://bizuogehao.com/news/baokuan-20260701/",
       "source": "https://bizuogehao.com/news/baokuan-20260701/"
@@ -251,11 +256,6 @@
       "question": "关于「AI短剧行业动态与本周新作观察：从技术验证到商业闭环」有什么要点？",
       "answer": "本周AI短剧行业持续升温，多家平台加速布局AIGC短剧制作，新作在剧本生成与视频质量上均有突破。本文梳理了行业动态、技术趋势及代表性新作，为从业者提供内容创作与出海策略参考。 详细内容见 https://bizuogehao.com/news/ai-duanju-hangye-dongtai-xinzuo-guancha/",
       "source": "https://bizuogehao.com/news/ai-duanju-hangye-dongtai-xinzuo-guancha/"
-    },
-    {
-      "question": "关于「AI短剧制作流程拆解：从选题、成片到分发」有什么要点？",
-      "answer": "AI短剧不是「让AI一键生成一部剧」。这篇拆解AI短剧制作的真实流程：选题、剧本、AI生成与真人结合、后期、到多平台分发，以及AI在哪一步真正省钱提效。 详细内容见 https://bizuogehao.com/news/ai-duanju-zhizuo-liucheng/",
-      "source": "https://bizuogehao.com/news/ai-duanju-zhizuo-liucheng/"
     }
   ]
 }
