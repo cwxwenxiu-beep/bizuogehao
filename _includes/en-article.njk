@@ -280,28 +280,22 @@
       <button class="copy-btn" id="copy-btn" onclick="copyLink()">Copy Article Link</button>
     </div>
 
-    <!-- Related Articles -->
+    <!-- Related Articles (exclude current slug; max 4 — with 5 articles total this always works) -->
     {%- if collections.enpost %}
-    {%- set otherPosts = [] %}
-    {%- for post in collections.enpost | reverse %}
-      {%- if post.data.slug != slug %}
-        {%- set otherPosts = (otherPosts.push(post), otherPosts) %}
-      {%- endif %}
-    {%- endfor %}
-    {%- if otherPosts.length > 0 %}
     <div class="related-section">
       <div class="section-eyebrow">More Insights</div>
       <div class="related-grid">
-        {%- for post in otherPosts | first(4) %}
+        {%- for post in collections.enpost | reverse %}
+        {%- if post.data.slug != slug %}
         <a class="related-card" href="{{ post.url }}">
           <div class="related-cat">{{ post.data.category }}</div>
           <div class="related-title">{{ post.data.title }}</div>
           <div class="related-arrow">Read →</div>
         </a>
+        {%- endif %}
         {%- endfor %}
       </div>
     </div>
-    {%- endif %}
     {%- endif %}
 
     <div class="en-article-actions">
