@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-29T19:38:51.133Z",
+  "generated_at": "2026-07-01T19:33:08.729Z",
   "site": "https://bizuogehao.com",
   "purpose": "Content gap map for automatic topic planning and AI SEO/GEO coverage",
   "next_recommended_topic": {
-    "title": "AI短剧出海费用怎么算？成本结构拆解",
+    "title": "小红书种草怎么做？关键词、达人和笔记结构",
     "keywords": [
-      "AI短剧出海多少钱",
-      "短剧出海费用",
-      "短剧制作成本"
+      "小红书种草怎么做",
+      "小红书关键词",
+      "小红书笔记结构"
     ],
-    "priority": 96,
-    "category": "ai-drama",
-    "cluster_id": "ai-short-drama-overseas",
-    "cluster_name": "AI短剧出海",
+    "priority": 95,
+    "category": "daren",
+    "cluster_id": "xiaohongshu-seeding",
+    "cluster_name": "小红书种草",
     "covered": false
   },
   "clusters": [
@@ -26,23 +26,10 @@
         "AI短剧制作",
         "海外短剧"
       ],
-      "coverage": 63,
-      "covered": 5,
+      "coverage": 75,
+      "covered": 6,
       "total": 8,
       "missing": [
-        {
-          "title": "AI短剧出海费用怎么算？成本结构拆解",
-          "keywords": [
-            "AI短剧出海多少钱",
-            "短剧出海费用",
-            "短剧制作成本"
-          ],
-          "priority": 96,
-          "category": "ai-drama",
-          "cluster_id": "ai-short-drama-overseas",
-          "cluster_name": "AI短剧出海",
-          "covered": false
-        },
         {
           "title": "AI短剧题材怎么选？海外高转化题材拆解",
           "keywords": [
@@ -95,7 +82,7 @@
           "category": "ai-drama",
           "cluster_id": "ai-short-drama-overseas",
           "cluster_name": "AI短剧出海",
-          "covered": false
+          "covered": true
         },
         {
           "title": "短剧出海平台怎么选？TikTok、ReelShort、DramaBox对比",
@@ -188,8 +175,8 @@
         "达人投放代运营",
         "KOL投放"
       ],
-      "coverage": 17,
-      "covered": 1,
+      "coverage": 67,
+      "covered": 4,
       "total": 6,
       "missing": [
         {
@@ -206,33 +193,6 @@
           "covered": false
         },
         {
-          "title": "小红书、抖音、快手达人投放怎么分工？",
-          "keywords": [
-            "达人投放平台",
-            "小红书达人",
-            "抖音达人",
-            "快手达人"
-          ],
-          "priority": 92,
-          "category": "daren",
-          "cluster_id": "influencer-marketing",
-          "cluster_name": "达人营销",
-          "covered": false
-        },
-        {
-          "title": "KOL和KOC怎么搭配？品牌种草矩阵打法",
-          "keywords": [
-            "KOL KOC",
-            "种草矩阵",
-            "达人矩阵"
-          ],
-          "priority": 91,
-          "category": "daren",
-          "cluster_id": "influencer-marketing",
-          "cluster_name": "达人营销",
-          "covered": false
-        },
-        {
           "title": "达人分销适合哪些产品？佣金和转化路径判断",
           "keywords": [
             "达人分销",
@@ -240,19 +200,6 @@
             "佣金"
           ],
           "priority": 87,
-          "category": "daren",
-          "cluster_id": "influencer-marketing",
-          "cluster_name": "达人营销",
-          "covered": false
-        },
-        {
-          "title": "达人投放效果复盘：互动、搜索、转化和ROI",
-          "keywords": [
-            "达人投放复盘",
-            "投放ROI",
-            "达人营销效果"
-          ],
-          "priority": 86,
           "category": "daren",
           "cluster_id": "influencer-marketing",
           "cluster_name": "达人营销",
@@ -298,7 +245,7 @@
           "category": "daren",
           "cluster_id": "influencer-marketing",
           "cluster_name": "达人营销",
-          "covered": false
+          "covered": true
         },
         {
           "title": "KOL和KOC怎么搭配？品牌种草矩阵打法",
@@ -311,7 +258,7 @@
           "category": "daren",
           "cluster_id": "influencer-marketing",
           "cluster_name": "达人营销",
-          "covered": false
+          "covered": true
         },
         {
           "title": "达人分销适合哪些产品？佣金和转化路径判断",
@@ -337,7 +284,7 @@
           "category": "daren",
           "cluster_id": "influencer-marketing",
           "cluster_name": "达人营销",
-          "covered": false
+          "covered": true
         }
       ]
     },
