@@ -14,9 +14,7 @@ draft: false
 
 AI短剧出海并非单一环节的成本，而是从创意策划到最终变现的完整链条。整体费用可划分为四个核心板块：**前期策划与剧本生成**、**AI视频制作与技术投入**、**多语言适配与本地化**、以及**投放运营与合规审核**。其中，AI技术的介入使剧本生成和视频制作环节的成本显著降低，但本地化与投放费用仍占据较高比重。
 
-![AI短剧出海费用成本结构拆解：从制作到投放的全链路预算指南 - AI短剧出海费用成本结构拆解：从制作到投放的全链路预算指南](/assets/img/uploads/articles/ai-duanju-chuhai-chengben-jiexi/article-ai-1782934178551-lzvwy.jpg)
 
-> AI短剧出海费用成本结构拆解：从制作到投放的全链路预算指南
 
 ![AI短剧出海费用成本结构拆解：从制作到投放的全链路预算指南 - AI短剧出海费用构成概览](/assets/img/uploads/articles/ai-duanju-chuhai-chengben-jiexi/article-ai-1782934188158-ljs1x.jpg)
 
